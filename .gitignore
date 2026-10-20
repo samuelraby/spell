@@ -1,0 +1,7 @@
+node_modules/
+build/
+dist/
+raycast-env.d.ts
+Spell/
+Spell.zip
+.DS_Store

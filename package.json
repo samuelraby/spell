@@ -1,0 +1,61 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "spell",
+  "title": "Spell",
+  "description": "Spell any word with the macOS spell checker and dictionary. Works offline.",
+  "icon": "icon.png",
+  "author": "samuel",
+  "categories": [
+    "Productivity"
+  ],
+  "license": "MIT",
+  "platforms": [
+    "macOS"
+  ],
+  "commands": [
+    {
+      "name": "spell",
+      "title": "Spell",
+      "description": "Find the right spelling of a word.",
+      "mode": "view",
+      "preferences": [
+        {
+          "name": "completionsFirst",
+          "title": "Completions",
+          "label": "Show completions first",
+          "description": "Words that start with what you type appear before suggested corrections.",
+          "type": "checkbox",
+          "default": false
+        },
+        {
+          "name": "showDefinitions",
+          "title": "Definitions",
+          "label": "Show definitions",
+          "description": "Shows a short definition next to each word.",
+          "type": "checkbox",
+          "default": true
+        },
+        {
+          "name": "openInDictionary",
+          "title": "Primary Action",
+          "label": "Open in Dictionary",
+          "description": "Clicking a word or pressing ↵ opens it in Dictionary. ⌘↵ copies it.",
+          "type": "checkbox",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^2.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.17",
+    "@types/react": "19.0.10",
+    "typescript": "^6.0.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist -o build",
+    "package": "sh scripts/package.sh"
+  }
+}
