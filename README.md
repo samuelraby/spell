@@ -1,18 +1,23 @@
 # Spell
 
-Spell any word with the macOS spell checker and dictionary, right from [Tinycast](https://github.com/abue-ammar/tinycast). Works offline. Nothing you type leaves your Mac.
+Find the right spelling of any word without leaving the keyboard. Spell is a [Tinycast](https://github.com/abue-ammar/tinycast) extension that uses the spell checker and dictionary built into macOS. It works offline, and nothing you type leaves your Mac.
 
-## Features
+## What it does
 
-- **Suggestions as you type.** The best correction comes first, labeled Correction.
-- **Short definitions.** Each word shows the start of its meaning from the macOS dictionary.
-- **Quick actions.** ↵ copies the word, ⇧↵ pastes it into the app you were using, and ⌘↵ opens it in Dictionary.
-- **Matches your casing.** Type "Hello" or "HELLO" and suggestions follow.
-- **Instant repeats.** Words you've looked up before appear immediately. ⇧⌫ clears the cache.
+Type a word, even a misspelled one, and Spell lists the closest matches as you type. The best match is marked Correction, and each word shows a short definition from the macOS dictionary.
+
+| Shortcut | Action |
+| --- | --- |
+| ↵ | Copy the word |
+| ⇧↵ | Paste it into the app you were using |
+| ⌘↵ | Open it in Dictionary |
+| ⇧⌫ | Clear recent lookups |
+
+Spell follows your capitalization, and words you've looked up before appear instantly.
 
 ### Settings
 
-| Setting | Default | What it does |
+| Setting | Default | Description |
 | --- | --- | --- |
 | Completions | Off | Words that start with what you type appear before suggested corrections. |
 | Definitions | On | Shows a short definition next to each word. |
@@ -20,28 +25,17 @@ Spell any word with the macOS spell checker and dictionary, right from [Tinycast
 
 ## Install
 
-1. Download **Spell.zip** from the latest release and unzip it.
-2. In Tinycast, open **Settings › Extensions** and choose **Add from folder**.
-3. Select the **Spell** folder.
-4. Open **Spell** and look up a word.
-5. Quit and reopen Tinycast to load the Dictionary icon.
+1. Download **Spell.zip** from Releases and unzip it.
+2. In Tinycast, open **Settings › Extensions**.
+3. Click **Add from folder** and choose the **Spell** folder.
+4. Open **Spell** in Tinycast.
+5. Quit and reopen Tinycast to show the Dictionary icon.
 
-You can delete the zip and folder afterward. Tinycast keeps its own copy.
+Tinycast keeps its own copy, so you can delete the download afterward.
 
-Upgrading? Uninstall the old version in **Settings › Extensions** first, then follow the steps above.
+To update, remove the current version in **Settings › Extensions**, then repeat these steps.
 
-## How it works
-
-Spell asks two built-in macOS services for every lookup: the spell checker (`NSSpellChecker`) for corrections, guesses, and completions, and Dictionary Services for definitions. The extension contains no word list and makes no network requests.
-
-Two helpers do the asking:
-
-- `assets/spell-helper.js` runs through the JavaScript for Automation engine built into every Mac, so Spell works with nothing else installed.
-- `assets/spell-helper.swift` is compiled in the background on first use when Apple's Command Line Tools or Xcode are present. Once it's ready, Spell switches to it for faster lookups. It rebuilds automatically whenever its source changes.
-
-On first open, Spell also copies the Dictionary app's icon from your Mac to use as its own, so no Apple artwork ships in this repository.
-
-## Build
+## Build from source
 
 Requires Node.js.
 
@@ -50,7 +44,7 @@ npm install
 npm run package
 ```
 
-This creates `Spell/` and `Spell.zip`, ready to add to Tinycast.
+This creates **Spell.zip** in the project folder.
 
 ## License
 
