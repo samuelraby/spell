@@ -45,7 +45,7 @@ npm install
 npm run package
 ```
 
-This creates **Spell.zip** in the project folder.
+This creates **Spell.zip** in the project folder. Publishing a release on GitHub builds the same zip and attaches it automatically.
 
 ## License
 
