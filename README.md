@@ -36,17 +36,6 @@ Tinycast keeps its own copy, so you can delete the download afterward.
 
 To update, remove the current version in **Settings › Extensions**, then repeat these steps.
 
-## Build from source
-
-Requires Node.js.
-
-```sh
-npm install
-npm run package
-```
-
-This creates **Spell.zip** in the project folder. Publishing a release on GitHub builds the same zip and attaches it automatically.
-
 ## License
 
 [MIT](LICENSE)
