@@ -1,5 +1,7 @@
 # Spell
 
+> **Beta.** Spell is in active development. Expect rough edges, and features may change between releases.
+
 Find the right spelling of any word without leaving the keyboard. Spell is a [Tinycast](https://github.com/abue-ammar/tinycast) extension that uses the spell checker and dictionary built into macOS. It works offline, and nothing you type leaves your Mac.
 
 ## What it does
@@ -49,3 +51,5 @@ This creates **Spell.zip** in the project folder.
 ## License
 
 [MIT](LICENSE)
+
+Spell is an independent project and is not affiliated with, authorized, sponsored, or approved by Apple Inc., Raycast, or Tinycast. macOS is a trademark of Apple Inc., registered in the U.S. and other countries and regions.
