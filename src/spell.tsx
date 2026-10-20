@@ -25,7 +25,6 @@ interface SpellResult {
 
 const asset = (name: string) => join(environment.assetsPath, name);
 const swiftSource = asset("spell-helper.swift");
-const iconPath = asset("icon.png");
 const fastHelper = join(environment.supportPath, "spell-helper");
 const fastHelperStamp = `${fastHelper}.source-hash`;
 const typingPause = 40;
@@ -183,11 +182,6 @@ export default function Command() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const typed = searchText.trim();
-
-  // Copies this Mac's Dictionary icon in as the extension icon, so no Apple artwork ships in the zip.
-  useEffect(() => {
-    if (!existsSync(iconPath)) osascript("fetch-icon.js", iconPath).catch(() => undefined);
-  }, []);
 
   useEffect(() => {
     setError(null);

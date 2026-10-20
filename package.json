@@ -3,7 +3,6 @@
   "name": "spell",
   "title": "Spell",
   "description": "Spell any word with the macOS spell checker and dictionary. Works offline.",
-  "icon": "icon.png",
   "author": "samuel",
   "categories": [
     "Productivity"

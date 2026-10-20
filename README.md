@@ -1,6 +1,6 @@
 # Spell
 
-> **Beta.** Spell is in active development. Expect rough edges, and features may change between releases.
+> **Beta.** Spell is in active development.
 
 Find the right spelling of any word without leaving the keyboard. Spell is a [Tinycast](https://github.com/abue-ammar/tinycast) extension that uses the spell checker and dictionary built into macOS. It works offline, and nothing you type leaves your Mac.
 
@@ -31,7 +31,6 @@ Spell follows your capitalization, and words you've looked up before appear inst
 2. In Tinycast, open **Settings › Extensions**.
 3. Click **Add from folder** and choose the **Spell** folder.
 4. Open **Spell** in Tinycast.
-5. Quit and reopen Tinycast to show the Dictionary icon.
 
 Tinycast keeps its own copy, so you can delete the download afterward.
 
